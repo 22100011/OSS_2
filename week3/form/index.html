@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Web Page</title>
+    <style>
+        .button {
+            margin-left: 5px;
+            padding: 5px 10px;
+        }
+        .add-button {
+            background-color: blue;
+            color: white;
+        }
+        .remove-button {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Web Page</h1>
+    <input type="text" id="itemInput" placeholder="items1, items2, item3">
+    <button class="button add-button" onclick="addItems()">추가</button>
+    <button class="button remove-button" onclick="removeItems()">삭제</button>
+    <ul id="itemList"></ul>
+
+    <script>
+        function addItems() {
+            const input = document.getElementById('itemInput').value;
+            const items = input.split(',').map(item => item.trim());
+            const list = document.getElementById('itemList');
+
+            for (let i = 0; i < items.length; i++) { // for문을 사용하여 항목을 순회
+                if (items[i]) { // 빈 항목이 아닌 경우에만 추가
+                    const li = document.createElement('li');
+                    li.textContent = items[i];
+                    list.appendChild(li);
+                }
+            }
+
+            document.getElementById('itemInput').value = ''; // 입력 필드를 비웁니다.
+        }
+
+        function removeItems() {
+            const list = document.getElementById('itemList');
+            list.innerHTML = ''; // 목록을 모두 삭제합니다.
+        }
+    </script>
+</body>
+</html>
