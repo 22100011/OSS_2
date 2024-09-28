@@ -27,7 +27,12 @@
       <input type="text" id="author" name="author" value="저자1">
       <br><br>
       <label for="publisher">출판사</label><br>
-      <input type="text" id = "publisher" name="publisher" value="출판사"> 
+      <select>
+        <option>도화문구</option>
+        <option>구부문구</option>
+        <option>이상문구</option>
+        <option>김구문구</option>
+      </select>
       <br><br>
       <label for="year">출판년도</label><br>
       <input type="number" id = "year" name = year value="1">
@@ -35,6 +40,8 @@
       <label for="price">가격</label><br>
       <input type="number" id = price name = price value="1">
       <br><br>
+      <input type="reset" value="reset">
+      <br>
       <button class = button onclick="input_button()">확인</button>
     </form>
   </div>
