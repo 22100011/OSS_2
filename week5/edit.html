@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="my.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>도서관리</h1>
+  </div>
+  <div class=container style="text-align: right;">
+    <a href="#" class=button>취소</a>
+  </div>
+  <div class=container>
+    <form id="bookForm" action="#">
+      <label for="number">번호</label><br>
+      <input type="number" id="number" name="number" value="1">
+      <br><br>
+      <label for="title">도서명</label><br>
+      <input type="text" id="title" name="title" value="도서명1">
+      <br><br>
+      <label for="author">저자</label><br>
+      <input type="text" id="author" name="author" value="저자1">
+      <br><br>
+      <label for="publisher">출판사</label><br>
+      <input type="text" id = "publisher" name="publisher" value="출판사"> 
+      <br><br>
+      <label for="year">출판년도</label><br>
+      <input type="number" id = "year" name = year value="1">
+      <br><br>
+      <label for="price">가격</label><br>
+      <input type="number" id = price name = price value="1">
+      <br><br>
+      <button class = button onclick="input_button()">확인</button>
+    </form>
+  </div>
+  <script src = "edit.js"></script>
+</body>
+
+</html>
